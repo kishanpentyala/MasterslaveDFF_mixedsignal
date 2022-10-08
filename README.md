@@ -16,7 +16,6 @@
 - [Makerchip Plots](#makerchip-plots)
 - [Netlists](#netlists)
 - [NgSpice Plots](#ngspice-plots)
-- [GAW Plots](#gaw-plots)
 - [Steps to run generate NgVeri Model](#steps-to-run-generate-ngveri-model)
 - [Steps to run this project](#steps-to-run-this-project)
 - [Acknowlegdements](#acknowlegdements)
@@ -179,11 +178,11 @@ endmodule
 ## Steps to run this project
 1. Open a new terminal
 2. Clone this project using the following command:</br>
-```git clone https://github.com/Eyantra698Sumanto/XOR-XNOR-Gate.git ```</br>
+```https://github.com/kishanpentyala/MasterslaveDFF_mixedsignal.git ```</br>
 3. Change directory:</br>
-```cd eSim_project_files/xor_xnor```</br>
+```cd masterslaveDFF```</br>
 4. Run ngspice:</br>
-```ngspice xor_xnor.cir.out```</br>
+```ngspice masterslaveDFF.cir.out```</br>
 5. To run the project in eSim:
 
   - Run eSim</br>
@@ -194,6 +193,12 @@ endmodule
 2. Steve Hoover, Founder, Redwood EDA
 3. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
 4. Sumanto Kar, eSim Team, FOSSEE
+5. http://iitb.ac.in/
+6. https://www.google.co.in/
+7. https://fossee.in/
+8. https://spoken-tutorial.org/
+9. https://www.vlsisystemdesign.com/
+10. https://www.c2s.gov.in/
 
 ## References
 1. Ahmad, Nabihah & Hasan, Rezaul. (2011). A new design of XOR-XNOR gates for low power application. 10.1109/ICEDSA.2011.5959039. 
