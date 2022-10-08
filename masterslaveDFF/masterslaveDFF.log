@@ -1,0 +1,4 @@
+Circuit: * D:\esim\esim_workspace\masterslaveDFF\masterslaveDFF.cir
+
+Fatal Error: Unknown subcircuit called in:
+   x1 net-_x1-pad1_ gnd net-_sc1-pad1_ net-_sc2-pad1_ clk gnd avsd_opamp

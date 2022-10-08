@@ -1,0 +1,26 @@
+* D:\esim\esim_workspace\masterslaveDFF\masterslaveDFF.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 10/7/2022 5:27:23 PM
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+U1  Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ Net-_U1-Pad4_ kishan_masterslavedff		
+v3  D GND pulse		
+v2  rst GND pulse		
+U2  clk rst D Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ adc_bridge_3		
+U3  Net-_U1-Pad4_ Q dac_bridge_1		
+U7  Q plot_v1		
+U4  clk plot_v1		
+U5  rst plot_v1		
+U6  D plot_v1		
+scmode1  SKY130mode		
+X1  Net-_X1-Pad1_ Net-_U10-Pad~_ Net-_U9-Pad~_ Net-_U8-Pad~_ 3stcmringosci13		
+X2  Net-_U10-Pad~_ Net-_X1-Pad1_ clk smttrigger21		
+v1  Net-_X1-Pad1_ GND DC		
+U10  Net-_U10-Pad~_ plot_v1		
+U9  Net-_U9-Pad~_ plot_v1		
+U8  Net-_U8-Pad~_ plot_v1		
+
+.end
