@@ -1,6 +1,5 @@
 # Mixed Signal Circuit Design and Simulation Marathon
-# Mixed Signal Circuit Design and Simulation Marathon
-# XOR-XNOR-Gate
+# MasterslaveDFF_mixedsignal
 - [Abstract](#abstract)
 - [Reference Circuit Diagram](#reference-circuit-diagram)
 - [Reference Waveform](#reference-waveform)
