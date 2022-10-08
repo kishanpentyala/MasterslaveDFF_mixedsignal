@@ -4,7 +4,6 @@
 - [Reference Circuit Diagram](#reference-circuit-diagram)
 - [Reference Waveform](#reference-waveform)
 - [Circuit Details](#circuit-details)
-- [Truth Table](#truth-table)
 - [Software Used](#software-used)
   * [eSim](#esim)
   * [NgSpice](#ngspice)
@@ -22,47 +21,25 @@
 - [References](#references)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
-
 ## Abstract
-With the increasing technology, the size of the transistors is
-reducing. The reducing size leads to the tradeoff between
-power, efficiency and switching time. Because of which
-there is requirement to design low power transistor with less
-area and lesser number of gates. The design should use
-lesser power as well. Thus, making it more and more
-efficient.
+This paper presents design of a Master slave D flipflop which works on a level triggered clock.
+Design is done using esim, Makerchip-Ngveri and sky130 pdk.
+This design provides stable output irrespective of glitches at input and used as an alternative to negative edge triggered D flipflop
 ## Reference Circuit Diagram
 ![seqimg40](https://user-images.githubusercontent.com/57453168/194692323-dd648fa2-824a-492a-83df-dc10e61c9fe2.gif)
 ## Reference Waveform
 ![seqimg41](https://user-images.githubusercontent.com/57453168/194692370-03a99ffc-eda0-45e2-8ccf-eac8238ca04a.gif)
 ## Circuit Details
-As shown in the figure we have two cross coupled
-circuits of PMOS logic and NMOS logic.
+The Master slave block is a digital block and made using Verilog code in Makerchip-Ngveri tool.
 </br>
-On the PMOS logic we are getting the output as XOR
-while in the NMOS block we get the output as XNOR.
+Here a ring oscillator and a Schmitt trigger circuit is used to generate an analog clock wave and given through ADC to Master slave D Flipflop.
+3stcmringosci13 and smttrigger21 are the Analog sky130 IPs from FOSSE eSim-IP-Library
 </br>
-The transistors M4 and M3 behave as a pass transistor
-and pass the output of M1, M2 and M5, M6
-respectively.
+We can see clk signal has a period around 60ns and it has active high reset. 
+The circuit becomes active at negative edge of clock, 
+so Master slave flipflop working on level trigger clk act as negative edge triggered D Flipflop
 </br>
 
-The advantage of the above circuit is that it uses only
-6 transistors and gives both outputs of XOR and
-XNOR while the general circuit uses 8 transistors with
-only one output either XOR or XNOR.
-</br>
-This way it consumes less space and less power and is
-efficient in many ways.
-</br>
-## Truth Table
-
-| Input D  | Input CLK | Output Q |
-| ------------- | ------------- | ------------- |
-| ?  | 0 | No change |
-| 0  | 1 | 0 |
-| 1  | 1 | 1 |
 ## Software Used
 ### eSim
 It is an Open Source EDA developed by FOSSEE, IIT Bombay. It is used for electronic circuit simulation. It is made by the combination of two software namely NgSpice and KiCAD.
@@ -201,4 +178,5 @@ endmodule
 10. https://www.c2s.gov.in/
 
 ## References
-1. Ahmad, Nabihah & Hasan, Rezaul. (2011). A new design of XOR-XNOR gates for low power application. 10.1109/ICEDSA.2011.5959039. 
+1. Behaviour of Master Slave D Flipflop https://www.youtube.com/watch?v=5ykewHgHYBI
+2. Analog Sky130 IPs from FOSSE eSim-IP-Library	https://github.com/FOSSEE/eSim-IP-Library/tree/SKY130-Analog-IPs	 
