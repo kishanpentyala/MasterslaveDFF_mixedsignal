@@ -156,65 +156,11 @@ endmodule
 //Add \TLV here if desired                                     
 \SV
 endmodule
-
 ```
 ## Makerchip Plots
 ![image](https://user-images.githubusercontent.com/57453168/194694036-1a409a31-2999-4669-b271-a68f60db6554.png)
 ## Netlists
-```
-* d:\esim\esim_workspace\masterslavedff\masterslavedff.cir
-
-.include 3stcmringosci13.sub
-.include smttrigger21.sub
-.lib "D:\esim\FOSSEE\eSim\library\sky130_fd_pr\models\sky130.lib.spice" tt
-.include "D:\esim\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__pnp.model.spice"
-.include "D:\esim\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
-.include "D:\esim\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__inductors.model.spice"
-.include "D:\esim\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__r+c.model.spice"
-.include "D:\esim\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__linear.model.spice"
-.include "D:\esim\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
-* u1  net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ net-_u1-pad4_ kishan_masterslavedff
-v3  d gnd pulse(0 3.3 0 0 0 85n 170n)
-v2  rst gnd pulse(0 3.3 0 0 0 50n 450n)
-* u2  clk rst d net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ adc_bridge_3
-* u3  net-_u1-pad4_ q dac_bridge_1
-* u7  q plot_v1
-* u4  clk plot_v1
-* u5  rst plot_v1
-* u6  d plot_v1
-* s c m o d e
-x1 net-_x1-pad1_ net-_u10-pad~_ net-_u9-pad~_ net-_u8-pad~_ 3stcmringosci13
-x2 net-_u10-pad~_ net-_x1-pad1_ clk smttrigger21
-v1 net-_x1-pad1_ gnd  dc 3.3
-* u10  net-_u10-pad~_ plot_v1
-* u9  net-_u9-pad~_ plot_v1
-* u8  net-_u8-pad~_ plot_v1
-a1 [net-_u1-pad1_ ] [net-_u1-pad2_ ] [net-_u1-pad3_ ] [net-_u1-pad4_ ] u1
-a2 [clk rst d ] [net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ ] u2
-a3 [net-_u1-pad4_ ] [q ] u3
-* Schematic Name:                             kishan_masterslavedff, NgSpice Name: kishan_masterslavedff
-.model u1 kishan_masterslavedff(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
-* Schematic Name:                             adc_bridge_3, NgSpice Name: adc_bridge
-.model u2 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
-* Schematic Name:                             dac_bridge_1, NgSpice Name: dac_bridge
-.model u3 dac_bridge(out_low=0.0 out_high=5.0 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
-.tran 10e-09 1000e-09 500e-09
-
-* Control Statements 
-.control
-run
-print allv > plot_data_v.txt
-print alli > plot_data_i.txt
-plot v(q)
-plot v(clk)
-plot v(rst)
-plot v(d)
-plot v(net-_u10-pad~_)
-plot v(net-_u9-pad~_)
-plot v(net-_u8-pad~_)
-.endc
-.end
-```
+![image](https://user-images.githubusercontent.com/57453168/194695487-edc4c6e0-f1b5-4fae-9aaa-d54136e7ab0b.png)
 ## NgSpice Plots
 ![image](https://user-images.githubusercontent.com/57453168/194695112-a518d35c-5f55-4ddb-a546-0f538f56d704.png)
 ![image](https://user-images.githubusercontent.com/57453168/194695167-dcd02501-a915-4585-9eef-10ab4d25cb54.png)
