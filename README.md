@@ -34,9 +34,9 @@ area and lesser number of gates. The design should use
 lesser power as well. Thus, making it more and more
 efficient.
 ## Reference Circuit Diagram
-![image](https://user-images.githubusercontent.com/58599984/152688334-fa3ad04d-e142-4dd1-a0cf-00fd13ca2d9e.png)
+![seqimg40](https://user-images.githubusercontent.com/57453168/194692323-dd648fa2-824a-492a-83df-dc10e61c9fe2.gif)
 ## Reference Waveform
-![image](https://user-images.githubusercontent.com/58599984/152688402-29877a15-deb3-4dee-9bcc-2313851182de.png)
+![seqimg41](https://user-images.githubusercontent.com/57453168/194692370-03a99ffc-eda0-45e2-8ccf-eac8238ca04a.gif)
 ## Circuit Details
 As shown in the figure we have two cross coupled
 circuits of PMOS logic and NMOS logic.
@@ -59,12 +59,11 @@ efficient in many ways.
 </br>
 ## Truth Table
 
-| Input A  | Input B | Output XOR  | Output XNOR |
-| ------------- | ------------- | ------------- | ------------- |
-| 0  | 0 | 0  | 1 |
-| 0  | 1 | 1| 0|
-| 1  | 0 |1|0|
-| 1 | 1 |0|1|
+| Input D  | Input CLK | Output Q |
+| ------------- | ------------- | ------------- |
+| ?  | 0 | No change |
+| 0  | 1 | 0 |
+| 1  | 1 | 1 |
 ## Software Used
 ### eSim
 It is an Open Source EDA developed by FOSSEE, IIT Bombay. It is used for electronic circuit simulation. It is made by the combination of two software namely NgSpice and KiCAD.
