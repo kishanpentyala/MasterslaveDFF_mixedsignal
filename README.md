@@ -21,6 +21,7 @@
 - [References](#references)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 ## Abstract
 This paper presents design of a Master slave D flipflop which works on a level triggered clock.
 Design is done using esim, Makerchip-Ngveri and sky130 pdk.
@@ -33,12 +34,15 @@ This design provides stable output irrespective of glitches at input and used as
 The Master slave block is a digital block and made using Verilog code in Makerchip-Ngveri tool.
 </br>
 Here a ring oscillator and a Schmitt trigger circuit is used to generate an analog clock wave and given through ADC to Master slave D Flipflop.
+</br>
 3stcmringosci13 and smttrigger21 are the Analog sky130 IPs from FOSSE eSim-IP-Library
 </br>
-We can see clk signal has a period around 60ns and it has active high reset. 
+We can see clk signal has a period around 60ns and it has active high reset.
+</br>
 The circuit becomes active at negative edge of clock, 
 so Master slave flipflop working on level trigger clk act as negative edge triggered D Flipflop
 </br>
+
 
 ## Software Used
 ### eSim
@@ -61,6 +65,7 @@ https://www.veripool.org/verilator/
 ## Circuit Diagram in eSim
 The following is the schematic in eSim:
 ![image](https://user-images.githubusercontent.com/57453168/194693124-551d65de-92ad-4e97-9b6d-ec64d49cee84.png)
+
 ## Verilog Code
 ```
 module dflipflop(q,clk,rst,d);
@@ -86,6 +91,7 @@ module Kishan_masterslaveDFF(q,clk,rst,d);
 	dflipflop masterff01(q1,clk,rst,d);
 	dflipflop slaveff02(q,iclk,rst,q1);
 endmodule
+
 ```
 ## Makerchip
 ```
